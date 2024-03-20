@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cast Your Vote</title>
+</head>
+<body>
+    <h1>Cast Your Vote</h1>
+    <form method="post" action="{{ url_for('vote') }}">
+        <label>
+            Enter your Ethereum address:
+            <input type="text" name="address" required>
+        </label>
+        <label>
+            Select a candidate:
+            <select name="candidate">
+                {% for i, candidate in enumerate(candidates) %}
+                <option value="{{ i }}">{{ candidate }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <input type="submit" value="Vote">
+    </form>
+</body>
+</html>

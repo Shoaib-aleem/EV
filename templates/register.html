@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Registration</title>
+</head>
+<body>
+    <h1>Voter Registration</h1>
+    <form method="post" action="{{ url_for('register') }}">
+        <label>
+            Enter your Ethereum address:
+            <input type="text" name="address" required>
+        </label>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
